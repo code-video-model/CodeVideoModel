@@ -1,0 +1,17 @@
+# Install the CUDA 12.6 PyTorch wheels first as shown in README.md.
+torch==2.7.1
+torchvision==0.22.1
+torchaudio==2.7.1
+diffusers @ git+https://github.com/huggingface/diffusers.git@90b4e34e79a86ec5e7f2437634fe95ecd2108796
+accelerate==1.14.0
+av
+imageio
+imageio-ffmpeg
+numpy
+peft==0.19.1
+pillow
+playwright==1.62.0
+safetensors==0.8.0
+soundfile
+transformers==5.12.1
+huggingface-hub>=0.34.0

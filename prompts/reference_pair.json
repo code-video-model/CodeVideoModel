@@ -1,0 +1,8 @@
+{
+  "instruction": "Edit the single provided same-version anchor photograph in place. Preserve its exact camera, crop, perspective, environment, architecture, people, furniture, props, obstacles, materials, lighting, color grade, and every pixel-spatial relationship not involved in the requested variant. Apply only the target variant difference stated below. Treat this as a localized photographic edit, not scene regeneration. Do not change viewpoint, redesign the room, remove shared people or objects, add unrelated content, or produce a collage, inset, split screen, or multiple panels.",
+  "rules": {
+    "scene": "Keep every shared scene element unchanged. Modify only the specific chair, table, door, vehicle position, or wall-layout state required by the target variant.",
+    "robot": "Replace only the anchor robot embodiment with the target robot embodiment at the same position, scale, pose phase, and route state. The target must contain exactly one robot.",
+    "trajectory": "Keep the anchor robot, world, start, goal, camera, and every shared object unchanged. Replace only the visible navigation trajectory with the target path and show exactly one continuous route."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "seed": "The only additional source you may read is `@ANCHOR@`. It is\nan explicitly allowlisted, read-only shared base case. Never modify it. Copy\nonly the files needed into this job's exclusive work directory.\nPreserve its scene, animation, environment, timing, and all organization/group\ninvariants, changing only the intended factor expressed by application,\nsubtype, variant, and prompt.",
+  "guidance": {
+    "scene": "For scene/world editing, preserve camera, animation, timing, and all unaffected assets; apply only the requested environment or scene edit.",
+    "robot": "For robotics simulation or embodiment pairs, preserve the task, world, object layout, action timing, and camera; change only the specified robot embodiment or manipulation factor.",
+    "trajectory": "For trajectory variation, preserve subject, scene, action, timing, and camera unless camera path is the named factor; alter only the requested trajectory."
+  },
+  "preservation": {
+    "scene": "Preserve every unrelated source file and world property: camera controller and\ntrajectory, room geometry outside the target edit, all other object transforms,\nmaterials, lighting, animation timing, and rendering settings. Do not redesign\nor beautify the scene. Leave `case/camera_trajectory.json` byte-for-byte\nunchanged; the pipeline rejects a camera mismatch.",
+    "robot": "Preserve the cloned environment, object transforms, obstacles, start and goal,\nnavigation curve, speed profile, animation timing, camera controller, camera\ntrajectory, lighting, materials, and every non-agent entity. Environment or camera refinements are forbidden, even if they appear visually preferable. Leave `case/camera_trajectory.json` byte-for-byte unchanged.",
+    "trajectory": "## Strict navigation trajectory replacement\n\nThis workspace has already been populated as a literal clone of the paired\npath Anchor codebase at `@ANCHOR@`. Preserve the robot entity, geometry,\nmaterials, articulation, gait implementation, environment, obstacle and target\ntransforms, lighting, camera controller, camera trajectory, start state, goal\nstate, and event timing.\n\nModify only the navigation path definition (for example spline control points\nor waypoints) and the minimum directly path-dependent heading/distance\nparameterization required to follow it. Do not move obstacles or targets, alter\nthe robot, change the camera, or redesign any source file. Leave\n`case/camera_trajectory.json` byte-for-byte unchanged; the pipeline rejects a\ncamera mismatch."
+  }
+}

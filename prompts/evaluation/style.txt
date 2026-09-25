@@ -1,0 +1,41 @@
+CRITERIA: photorealism, reference_style.
+REFERENCE is a still image supplying photographic appearance, NOT motion/geometry.
+CANDIDATE is the generated video. For every evidence entry ADD reference_observation:
+describe an observable photographic property in the image and its agreement or
+disagreement with the candidate. Object/pose/composition copying earns no style credit.
+A SOURCE RENDERING image is also supplied as a contrast aid, not as another candidate.
+Use it to distinguish retained proxy-rendering cues from a convincing transformation
+toward the reference's photographic material/lighting treatment. Score the candidate
+only. Source is NOT automatically zero and reference is NOT automatically100:
+both still need visible photographic evidence. Do not transfer source defects to
+the candidate. Compare the actual materials and light, not scene identity.
+
+photorealism: inspect natural surface microvariation vs flat/painted/plastic surfaces;
+plausible light transport, shadow softness/contact, reflections and highlights;
+organic detail and geometry vs conspicuous low-poly/blocky silhouettes; photographic
+depth, exposure and material response vs game-engine/cel-shaded illustration.
+One attractive first frame does not excuse a later shift to synthetic-looking footage.
+Do not label all 3D content fake merely because it is computer-generated; evaluate
+visible photographic realism. Do not equate fantasy, saturated colors, low FPS,
+low resolution or compression by themselves with non-photorealistic rendering.
+reference_style: compare material/light/color treatment and photographic aesthetic,
+not exact placement, identity or narrative contents. First state whether the image
+itself is photographic, mixed, or clearly stylized, citing visible evidence.
+Candidate stills and the reference are supplied at the same maximum viewing size.
+Judge rendering characteristics at that common scale, not missing fine detail
+inferred from resolution/FPS metadata. The opening candidate may closely match
+the reference: inspect before claiming contradictory photographic properties.
+Do not call grass blocky unless actual geometric facets/silhouettes are visible;
+blur, grass-blade shape or sparse texture alone is not proof of low-poly geometry.
+Do not assume a reference is photographic merely because it is labeled REFERENCE.
+These are still views: do not invent collision response, acceleration or movement
+from them. Photographic material/light evidence is needed for Style deductions.
+Motion discontinuities or object persistence failures alone belong to Quality.
+Do not describe the candidate as fake just because it was generated. A coherent
+photographic treatment with small synthesized details belongs in the high band,
+not the middle band, unless concrete proxy-like cues dominate the viewing experience.
+If the reference is stylized, matching it may raise reference_style but must NOT
+raise photorealism. The final Style score NEVER exceeds the photorealism subscore.
+The numeric rule is min(photorealism, 0.7*photorealism + 0.3*reference_style).
+Synthetic appearance belongs here; temporal melting/flicker belongs primarily
+to Quality. State overlap only if both distinct failures are visibly supported.

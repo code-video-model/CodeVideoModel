@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code Video Model / Scene Viewer</title>
+  <link rel="stylesheet" href="_viewer/style.css">
+</head>
+<body>
+  <header>
+    <div><span class="eyebrow">CODE VIDEO MODEL</span><h1>Scene Viewer</h1></div>
+    <span id="scene-name"></span>
+  </header>
+  <main>
+    <p id="status" role="status">Loading scene...</p>
+    <div class="views">
+      <section class="panel">
+        <h2>Camera View <span>Original composition</span></h2>
+        <div id="camera-stage"><iframe id="scene-host" title="Generated Three.js scene"></iframe></div>
+      </section>
+      <section class="panel">
+        <h2>World Inspector <button id="reset" disabled>Reset view</button></h2>
+        <div id="world-stage" tabindex="0" aria-label="3D world: drag to orbit, shift-drag to pan, scroll to zoom"></div>
+        <div class="options">
+          <label><input id="frustum" type="checkbox" checked disabled> Camera</label>
+          <label><input id="path" type="checkbox" checked disabled> Path</label>
+          <label><input id="grid" type="checkbox" checked disabled> Grid</label>
+          <span>Drag: orbit &middot; Shift-drag: pan &middot; Scroll: zoom</span>
+        </div>
+      </section>
+    </div>
+    <section class="panel transport" aria-label="Playback">
+      <div class="buttons">
+        <button id="previous" aria-label="Previous frame" disabled>Previous</button>
+        <button id="play" disabled>Play</button>
+        <button id="next" aria-label="Next frame" disabled>Next</button>
+        <output id="frame-label"></output>
+      </div>
+      <input id="timeline" type="range" min="0" value="0" step="1" aria-label="Frame" disabled>
+      <output id="time-label"></output>
+    </section>
+    <section class="panel source">
+      <h2><label for="source-file">Scene Source</label><select id="source-file" disabled></select></h2>
+      <p>Read-only. Edit files in your workspace, then reload this page.</p>
+      <pre id="source-code" tabindex="0"></pre>
+    </section>
+  </main>
+  <script type="module" src="_viewer/app.js"></script>
+</body>
+</html>

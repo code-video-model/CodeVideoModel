@@ -1,0 +1,43 @@
+CRITERIA: composition, camera_motion, prompt_alignment.
+SOURCE is the Three.js layout/camera reference. CANDIDATE is the generated video.
+The prompt is the intended content, action and camera specification.
+
+For every evidence entry ADD: source_seconds, source_observation, prompt_clause.
+source_observation describes what is ACTUALLY VISIBLE in the SOURCE at that time;
+observation describes the CANDIDATE and explicitly names matches/discrepancies.
+prompt_clause is a verbatim relevant substring of the quoted prompt, or null when
+that comparison has no corresponding prompt clause. Do not paraphrase a quote.
+Compare corresponding normalized progress while keeping both real timestamps.
+Paired still views are provided at the same normalized progress. Use these for
+direct layout comparison, and use the complete videos for motion/event progression.
+
+composition: compare subject center and relative size in the frame, horizon/vanishing
+point, camera elevation and visible object faces, foreground/background ordering,
+occlusion, relative left/right/front/back layout, and progression of these properties.
+'Both contain the same scene/objects' is not enough for a high score.
+Inspect a scene-specific layout signature: relative order and screen-space size
+of salient objects, distinctive openings/obstacles, depth/occlusion relationships,
+and how these change. Describe deviations, not merely shared object categories.
+Do not deduct for textures, shading, exposure or realistic-vs-rendered appearance
+when geometry and framing agree. Only actual layout/visibility differences count.
+camera_motion: identify source and candidate direction/path (pan, truck, dolly, orbit,
+crane, roll, zoom), viewpoint/elevation changes, trajectory extent, parallax and
+timing of turns or stops. A forward shot vs an orbit, opposite orbit directions,
+or a static shot vs requested motion is a central mismatch even if appearance is good.
+Score composition and camera_motion against SOURCE independently of prompt_alignment.
+Matching the prompt must NEVER excuse or reduce a source-alignment discrepancy in
+those first two subscores. If prompt/source conflict, a candidate may legitimately
+score high on prompt_alignment and low on camera_motion; report both honestly.
+prompt_alignment: explicitly evaluate the requested composition/camera clauses,
+subjects, actions, event order and intentional edits. A bag-of-objects match is not
+enough. Identify prompt/source conflicts instead of silently picking one reference.
+Do not impose an action not stated in the prompt or visible in the source.
+Never repeat a requested orbit angle, action or time-freeze as an observed fact
+unless the visible sequence supports it. If the main subjects become unobservable,
+do not claim their posture/action remains correct. Required behavior that is
+unverifiable must be identified as unverified, not praised as completed.
+
+Report visible agreement AND disagreement. Generic scene descriptions without
+specific paired source/candidate evidence cannot justify 90+ camera alignment.
+A major/critical failure in any central structural criterion caps the final
+Structure score at 39/19, even if other criteria score well.

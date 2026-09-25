@@ -1,0 +1,61 @@
+CRITERIA: motion_continuity, artifact_freedom.
+Judge the candidate's visible sequence against intended continuous motion.
+The raw prompt supplies intent, not evidence that its requested motion actually occurs.
+A wrong but smooth camera path or different composition is not a technical-quality
+defect; those are Structure issues. Likewise, low-poly/shader-like appearance alone
+does not imply low Quality if edges, geometry and motion are stable.
+A smooth path must still be physically and perceptually natural: unintended
+camera intersection with opaque solid furniture/walls, implausible acceleration, near-plane
+clipping that obscures the scene, or a disorienting approach into a surface are Quality
+defects, not excused by continuity alone. A deliberate close-up is not the same as
+passing through a solid object. Judge this distinction from visible evidence.
+Do not penalize a coherent static shot solely because the source or prompt calls
+for motion; missing requested movement is a Structure failure. Actual accidental
+freezes or jerky stop/restart events are Quality defects when visibly supported.
+
+motion_continuity: assess continuity of viewpoint and framing, natural velocity
+and acceleration, plausible subject trajectories, and stable scene progression.
+Distinguish (a) ordinary regular stepping at low native FPS,
+(b) actual abrupt viewpoint/scene jumps, cuts, teleportation or unstable trajectories,
+and (c) hosted sampling gaps. FPS metadata alone is NEVER proof of a jump/artifact;
+identify concrete discontinuity in visible scene geometry or motion. Do not claim a
+smooth full sequence merely because a few sampled stills look coherent.
+Differences between frames roughly one second apart cannot by themselves establish
+a sudden jump: a natural turn or head-bob can happen between them. For such gaps,
+describe the motion as uncertain rather than declaring a cut without additional
+visible discontinuity evidence. Confidence must reflect this uncertainty.
+artifact_freedom: explicitly inspect geometry/topology or anatomy deformation,
+object identity/count persistence, unexplained appearance/disappearance, flicker,
+texture crawling, melting/smearing, duplication/ghosting, edge tearing, abnormal
+blur and compression. Distinguish plausible occlusion, intentional blur and intended
+effects from failures. For a significant defect give its visual symptom, location,
+phase/timestamp and whether local/transient or persistent.
+Additional consecutive-frame pairs and endpoint stills are provided. Use them to
+check object continuity where a sparsely sampled video impression is ambiguous.
+Uniformly sampled intermediate frames are also provided to bridge the longer gaps.
+A subject turning from side-on to front-on is not itself a camera cut. Track the
+background landmarks and the subject separately across intermediate timestamps.
+Only call a transition a jump/cut when visible discontinuity cannot be explained
+by the intervening camera/subject movement; do not ignore supplied intermediate frames.
+Compare the SAME physical part over close timestamps. A changing visible face,
+foreshortened rigid component, perspective enlargement, an object leaving the field
+of view, natural folds or a curved soft surface are NOT automatically deformation.
+A catastrophic geometry claim requires visible loss of coherent shape/connectivity
+that perspective, material flexibility and occlusion cannot plausibly explain.
+Do not use "perspective" as a blanket excuse either. Compare persistent landmarks:
+rigid straight edges, connected corners, proportions within the same surface,
+object identity, and texture attachment. Slow melting can be smooth between adjacent
+frames yet still fail across the full shot. Newly visible content must be consistent
+with plausible occlusion/reveal rather than simply assumed correct because the camera moved.
+Minor warping or imperfect fine details in otherwise coherent objects is not
+catastrophic. Give the concrete impossible change, not just words like "melting".
+If the supplied close-time evidence contradicts a broad impression from video
+sampling, use the actual visible evidence and reduce confidence in that impression.
+If the candidate changes abruptly into incoherent debris, noise or a different
+scene, do not praise those as realistic effects merely because the opening is good.
+But do not invent such a failure if it is not actually visible.
+
+Evidence must cover start/middle/end, not only the opening. Each check's reason
+must explicitly distinguish visible problems from native-FPS and sampling limitations.
+The final Quality mean is capped at39/19 when either criterion has a major/critical
+failure, so one good aspect cannot hide an unusable sequence.
