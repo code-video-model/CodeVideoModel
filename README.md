@@ -7,7 +7,7 @@
 </p>
 
 <p>
-<img src="assets/badges/tech-report.svg" alt="Tech Report" height="20">
+<a href="https://code-video-model.github.io/tech_report.pdf"><img src="assets/badges/tech-report.svg" alt="Tech Report" height="20"></a>
 <a href="https://code-video-model.github.io/"><img src="assets/badges/project-page.svg" alt="Project Page" height="20"></a>
 <a href="https://huggingface.co/datasets/code-video-model/CodeVideoBench"><img src="assets/badges/hugging-face.svg" alt="Hugging Face" height="20"></a>
 <a href="https://github.com/code-video-model/CodeVideoModel"><img src="assets/badges/code.svg" alt="GitHub Code" height="20"></a>
@@ -19,19 +19,7 @@
 
 ## Demo Video
 
-<div align="center">
-
-<a href="https://code-video-model.github.io/static/demo/Demo_CodeVideoModel_New.mp4">
-  <img src="https://code-video-model.github.io/static/images/first-frames-native/f3259741b723aa48ea56dfe6dee81a9673e6bcab06b64b840e48a396d2ff528f-frame000030.webp" alt="Code Video Model demo video" width="100%">
-</a>
-
-<p>
-  <a href="https://code-video-model.github.io/static/demo/Demo_CodeVideoModel_New.mp4"><b>▶ Watch the demo video</b></a>
-  &nbsp;·&nbsp;
-  <a href="https://code-video-model.github.io/">Project Page</a>
-</p>
-
-</div>
+https://github.com/user-attachments/assets/e3ff4222-65ed-466a-9e80-ab9b465f3421
 
 ## Installation
 
