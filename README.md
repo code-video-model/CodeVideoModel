@@ -7,12 +7,28 @@
 </p>
 
 <p>
-<img src="assets/badges/arxiv.svg" alt="arXiv" height="20">
-<a href="https://shopzilla-belief-noted-entertaining.trycloudflare.com/gallery.html"><img src="assets/badges/project-page.svg" alt="Project Page" height="20"></a>
+<img src="assets/badges/tech-report.svg" alt="Tech Report" height="20">
+<a href="https://code-video-model.github.io/"><img src="assets/badges/project-page.svg" alt="Project Page" height="20"></a>
 <a href="https://huggingface.co/datasets/code-video-model/CodeVideoBench"><img src="assets/badges/hugging-face.svg" alt="Hugging Face" height="20"></a>
 <a href="https://github.com/code-video-model/CodeVideoModel"><img src="assets/badges/code.svg" alt="GitHub Code" height="20"></a>
 <a href="LICENSE"><img src="assets/badges/code-license.svg" alt="Code License: Apache 2.0" height="20"></a>
 <a href="examples/LICENSES/CC-BY-4.0.txt"><img src="assets/badges/examples-license.svg" alt="Examples License: CC BY 4.0" height="20"></a>
+</p>
+
+</div>
+
+## Demo Video
+
+<div align="center">
+
+<a href="https://code-video-model.github.io/static/demo/Demo_CodeVideoModel_New.mp4">
+  <img src="https://code-video-model.github.io/static/images/first-frames-native/f3259741b723aa48ea56dfe6dee81a9673e6bcab06b64b840e48a396d2ff528f-frame000030.webp" alt="Code Video Model demo video" width="100%">
+</a>
+
+<p>
+  <a href="https://code-video-model.github.io/static/demo/Demo_CodeVideoModel_New.mp4"><b>▶ Watch the demo video</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://code-video-model.github.io/">Project Page</a>
 </p>
 
 </div>
