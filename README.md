@@ -19,7 +19,9 @@
 
 ## Demo Video
 
-https://github.com/user-attachments/assets/e3ff4222-65ed-466a-9e80-ab9b465f3421
+<a href="https://code-video-model.github.io/static/demo/Demo_CodeVideoModel_New.mp4">
+  <img src="https://code-video-model.github.io/static/images/first-frames-native/f3259741b723aa48ea56dfe6dee81a9673e6bcab06b64b840e48a396d2ff528f-frame000030.webp" alt="Code Video Model demo video" width="100%">
+</a>
 
 ## Installation
 
