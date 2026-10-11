@@ -19,9 +19,7 @@
 
 ## Demo Video
 
-<a href="https://code-video-model.github.io/static/demo/Demo_CodeVideoModel_New.mp4">
-  <img src="https://code-video-model.github.io/static/images/first-frames-native/f3259741b723aa48ea56dfe6dee81a9673e6bcab06b64b840e48a396d2ff528f-frame000030.webp" alt="Code Video Model demo video" width="100%">
-</a>
+https://github.com/user-attachments/assets/d1a8594d-14fa-49aa-a101-03da77ed585f
 
 ## Installation
 
@@ -216,5 +214,13 @@ The script makes one request per dimension and saves scores.
 If you find this repository useful, please cite:
 
 ```bibtex
-% Citation coming soon.
+@misc{liang2026codevideomodel,
+  title        = {Code Video Model},
+  author       = {Liang, Zhiyang and Zhang, Jiawei and Qian, Guocheng and Chen, Dongdong and Wan, Ziyu},
+  year         = {2026},
+  month        = oct,
+  note         = {Preprint},
+  doi          = {10.13140/RG.2.2.34014.80961},
+  url          = {https://code-video-model.github.io/tech_report.pdf}
+}
 ```
