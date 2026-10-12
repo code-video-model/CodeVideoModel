@@ -1,0 +1,5 @@
+# Paths resolve relative to this file; omitted assets download under runtime.weights_path.
+text_device: cuda:1
+device: cuda:0
+# Optional Unix socket of the isolated CPU renderer; never mount a Docker socket.
+# render_socket: /render/renderer.sock

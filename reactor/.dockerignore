@@ -1,0 +1,7 @@
+.git
+__pycache__
+.pytest_cache
+demo/node_modules
+demo/dist
+weights
+*.mp4
