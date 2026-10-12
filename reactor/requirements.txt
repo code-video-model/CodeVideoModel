@@ -1,0 +1,21 @@
+# Model dependencies resolved with Reactor Runtime during `reactor build`.
+# `build.runtime_version` in reactor.yaml selects the Runtime release.
+numpy
+av
+Pillow
+PyYAML
+huggingface-hub
+# Native CVM inference dependencies (CUDA 12.8 wheels support B200).
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.7.1+cu128
+torchvision==0.22.1+cu128
+torchaudio==2.7.1+cu128
+diffusers @ git+https://github.com/huggingface/diffusers.git@90b4e34e79a86ec5e7f2437634fe95ecd2108796
+accelerate==1.14.0
+peft==0.19.1
+safetensors==0.8.0
+transformers==5.12.1
+imageio
+imageio-ffmpeg
+soundfile
+playwright==1.62.0

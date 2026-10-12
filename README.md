@@ -75,6 +75,39 @@ python -m inference.generate_video \
   --output "outputs/${example}.mp4"
 ```
 
+## Inference with Reactor Runtime
+
+The [Reactor integration](reactor/README.md) provides a local inference service and
+a browser demo. Upload an existing proxy video or a Three.js scene ZIP, choose a
+reference image, and generate a complete 124-frame video with audio. Scene rendering
+runs in an isolated CPU container; video generation preserves the native H3 schedule.
+
+With Docker, the NVIDIA Container Toolkit, two B200 GPUs and the
+[Reactor CLI](https://docs.reactor.inc/deploy/platform/installation):
+
+```bash
+cd reactor
+reactor build
+reactor run --gpus '"device=0,1"' --shm-size 2g --port 8080
+```
+
+Wait until `curl -s http://localhost:8080/health` reports `"state":"available"`.
+In another terminal, from the repository root:
+
+```bash
+cd reactor/demo
+npm ci
+npm run dev
+```
+
+Open the printed URL, set **Runtime URL** to `http://localhost:8080`, click
+**Use endpoint**, then **Connect**. Select a demo or upload your inputs, enter a
+prompt, and click **Generate video**. Once **Video ready** appears, press Play.
+See the [integration README](reactor/README.md)
+for scene packaging, the isolated renderer, persistent weights and SSH access.
+Text-to-code authoring and automatic reference-image generation continue to use
+the original tools below.
+
 ## Inference
 
 ### 1. Text → Three.js Codebase

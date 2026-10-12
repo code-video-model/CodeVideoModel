@@ -1,0 +1,35 @@
+$schema: reactor/v2
+model:
+  name: code-video-model
+  version: v0.1.0
+  description: Code Video Model with native MiniMax-H3 early-step proxy conditioning.
+  resources:
+    gpu:
+      type: NVIDIA_B200
+      count: 2
+    cpu:
+      request: "4"
+      limit: "16"
+    memory:
+      request: 64Gi
+      limit: 256Gi
+runtime:
+  import: code_video_model:CodeVideo
+  config: code_video_model.yaml
+  step_results:
+    enabled: true
+  weights_path: ~/.cache/reactor_registry/code-video-model
+build:
+  runtime_version: "3.8.1"
+  python_version: "3.12"
+  cuda_version: "12.8.1"
+  python_requirements: requirements.txt
+  system_packages:
+    - git
+    - ffmpeg
+  run:
+    - PLAYWRIGHT_BROWSERS_PATH=/opt/browsers python -m playwright install --with-deps chromium
+    - python -c "import shutil, sys; shutil.copytree(sys.base_prefix, '/opt/renderer-python')"
+  runtime_env:
+    TOKENIZERS_PARALLELISM: "false"
+    PLAYWRIGHT_BROWSERS_PATH: /opt/browsers
