@@ -224,3 +224,7 @@ If you find this repository useful, please cite:
   url          = {https://code-video-model.github.io/tech_report.pdf}
 }
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/chart?repos=code-video-model%2FCodeVideoModel&type=date&legend=top-left)](https://www.star-history.com/?repos=code-video-model%2FCodeVideoModel&type=date&legend=top-left)
